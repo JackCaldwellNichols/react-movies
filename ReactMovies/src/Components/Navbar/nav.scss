@@ -1,0 +1,90 @@
+.navbar{
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgb(0,0,0,0.3) 50%);
+    transition: 0.2s ease-out;
+    &.scrolled {
+        background-color: var(--main-color);
+    }
+    .container{
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        .left{
+    
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .logo {
+                height: 50px;
+                margin-right: 40px;
+            }
+
+            span {
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            .icon{
+                margin: 0px 15px;
+                cursor: pointer;
+            }
+            .userImg {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            .profile{
+                .options{
+                    display: none;
+                    background-color: black;
+                    border-radius: 5px;
+                    .option{
+                        display: flex;
+                        align-items: center;
+                        padding: 5px;
+                        span{
+                            padding: 10px;
+                            cursor: pointer;
+                            font-weight: 300;
+                            &:hover{
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                  
+                }
+                &:hover {
+                    .options{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    right: 5px;
+                    }
+                }
+            }
+            .loginBtn{
+                background-color: #8C52FF;
+                color: white;
+                border: none;
+                padding: 5px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgb(53, 16, 101)
+                }
+            }
+        }
+    }
+}

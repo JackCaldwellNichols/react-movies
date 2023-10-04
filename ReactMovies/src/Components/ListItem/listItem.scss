@@ -1,0 +1,65 @@
+.listItem {
+    width: 225px;
+    height: 300px;
+    background-color: var(--main-color);
+    overflow: hidden;
+    margin-right: 5px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    position: relative;
+   
+ 
+    .listImage{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .listTitle{
+ 
+        display: none;
+    }
+
+
+    &:hover{
+        
+        .listImage{
+           opacity: 0.4;
+        }
+        .listTitle{
+            position: absolute;
+            bottom: 130px;
+            left: -50px;
+            font-size: 15px;
+            display: block;
+            padding: 10px;
+        }
+    
+        .itemDesc{
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            font-size: 14px;
+            display: block;
+            padding: 10px;
+        }
+
+        .itemInfo {
+            position: absolute;
+            color: white;
+            bottom: 5px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            .icon{
+                font-size: 20px;
+                margin-right: 5px;
+                border: 1px solid white;
+                border-radius: 50%;
+                padding: 5px;
+            }
+        }
+
+    }
+}

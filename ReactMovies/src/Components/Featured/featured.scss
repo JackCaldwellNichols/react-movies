@@ -1,0 +1,103 @@
+.featured {
+    height: 90vh;
+    position: relative;
+    margin-bottom: 40px;
+
+    .category {
+        position: absolute;
+        top: 80px;
+        left: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        z-index: 999;
+        select {
+            cursor: pointer;
+            background-color: var(--main-color);
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            margin-left: 20px;
+            padding: 5px;
+        }
+    }
+
+    .imgContainer{
+        position: relative;
+        img {
+            height: 90vh;
+            width: 100%;
+            object-fit: cover;
+        }
+        .close {
+            z-index: 200;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            .closeIcon {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .info {
+        width: 35%;
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 400px;
+        }
+        .desc {
+            margin: 20px 0px;
+
+        }
+
+        .buttons {
+            display: flex;
+         
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &.play {
+                    background-color: white;
+                    color: var(--main-color);
+                    &:hover {
+                        background-color: rgb(185, 185, 185);
+                    }
+    
+                }
+
+                &.more {
+                    background-color: white;
+                    color: var(--main-color);
+                    &:hover {
+                        background-color: rgb(185, 185, 185);
+                    }
+                }
+
+                span {
+                    margin-left: 5px;
+                }
+
+            }
+        }
+    }
+}

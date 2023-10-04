@@ -1,0 +1,110 @@
+.settings {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    width: 100vw;
+    .settingsInfo{
+        width: 60%;
+        padding: 150px 0px;
+        h1 {
+            font-size: 60px;
+            font-weight: 400;
+            border-bottom: 1px solid grey;
+        }
+        .userInfo{
+            display: flex;
+            padding: 50px;
+            .left{
+   
+                margin-right: 30px;
+                position: relative;
+                .editPic{
+                    position: absolute;
+                    bottom: 15px;
+                    left: 10px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                    padding: 3px;
+                }
+                img{
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    
+                }
+
+            }
+            .right{
+      
+                display: flex;
+                flex-direction: column;
+                input {
+                    width: 420px;
+                    background-color: gray;
+                    color: black;
+                    height: 40px;
+                    border: none;
+                    margin-bottom: 10px;
+                    padding-left: 10px;
+
+                }
+                .profileBtns{
+                    display: flex;
+                    gap: 20px;
+                button {
+                    border-radius: 5px;
+                    border: none;
+                    height: 40px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    margin-top: 10px;
+                    background-color: #8C52FF;
+                    padding: 5px 15px;
+                    color: white;
+                    width: 200px;
+                    &:hover {
+                        background-color: #572eaa;
+                    }
+                    &:last-child{
+                        background-color: red;
+                        &:hover{
+                            background-color: darkred;
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+    .feedback{
+        padding: 0px 50px;
+    }
+    .settingsWatchlist{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 100px;
+        align-items: flex-start;
+        justify-content: center;
+        width: 60%;
+        span {
+            color: white;
+            font-size: 30px;
+            font-weight: 500;
+            padding: 10px 0px;
+        }
+        .selection {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+        }
+ 
+    }
+}
