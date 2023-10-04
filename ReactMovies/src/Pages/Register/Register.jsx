@@ -34,7 +34,7 @@ const Register = () => {
     <div className='register'>
       <div className="top">
         <div className="wrapper">
-            <img src={logo} alt="logo" className='profilPic'/>
+            <img src={logo} alt="logo" className='logo'/>
             <button className='loginBtn'>Log In</button>
         </div>
       </div>

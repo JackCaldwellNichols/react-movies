@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .footer {
     background-color: var(--main-color);
     height: 300px;
@@ -5,9 +7,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    img{
+        @include tablet {
+            height: 80px;
+          }
+    }
+    @include tablet {
+      height: 200px;
+    }
     .iconCont{
         display: flex;
         color: white;
         gap: 40px   ;
+        @include tablet {
+            gap: 20px   ;
+          }
     }
 }

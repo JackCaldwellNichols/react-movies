@@ -1,3 +1,6 @@
+@import '../../App.scss';
+
+
 .settings {
     background-color: var(--main-color);
     display: flex;
@@ -6,21 +9,40 @@
     color: white;
     flex-direction: column;
     width: 100vw;
+
     .settingsInfo{
         width: 60%;
         padding: 150px 0px;
+        @include tablet {
+            width: 100%;
+            padding: 100px 0px;
+            text-align: center;
+        }
         h1 {
             font-size: 60px;
             font-weight: 400;
             border-bottom: 1px solid grey;
+            @include tablet {
+                font-size: 30px;
+                border: none;
+            }
         }
         .userInfo{
             display: flex;
             padding: 50px;
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
             .left{
    
                 margin-right: 30px;
                 position: relative;
+                @include tablet {
+                   margin-right: 0px;
+                   margin-bottom: 10px;
+                }
                 .editPic{
                     position: absolute;
                     bottom: 15px;
@@ -52,11 +74,19 @@
                     border: none;
                     margin-bottom: 10px;
                     padding-left: 10px;
+                    @include tablet {
+                        width: 200px;
+                    }
 
                 }
                 .profileBtns{
                     display: flex;
                     gap: 20px;
+                    @include tablet {
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 button {
                     border-radius: 5px;
                     border: none;
@@ -68,6 +98,9 @@
                     padding: 5px 15px;
                     color: white;
                     width: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     &:hover {
                         background-color: #572eaa;
                     }
@@ -84,6 +117,9 @@
     }
     .feedback{
         padding: 0px 50px;
+        @include tablet {
+         text-align: center ;
+        }
     }
     .settingsWatchlist{
         display: flex;
@@ -92,6 +128,9 @@
         align-items: flex-start;
         justify-content: center;
         width: 60%;
+        @include tablet {
+           display: none;
+           }
         span {
             color: white;
             font-size: 30px;

@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .register {
     background: linear-gradient(
         to bottom,
@@ -17,9 +19,11 @@
               display: flex;
               align-items: center;
               justify-content: space-between;
-
               .logo{
                 height: 40px;
+                @include tablet {
+                  display: none;
+                }
               }
 
               .loginBtn{
@@ -48,6 +52,12 @@
             left: 0;
             h1 {
                 font-size: 50px;
+                text-align: center;
+                @include tablet {
+                        font-size: 30px;
+                        padding: 10px;
+                        text-align: center;
+                  }
             }
 
             p{

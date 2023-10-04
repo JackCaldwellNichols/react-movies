@@ -8,7 +8,6 @@ import WatchListCard from '../../Components/WatchListCard/WatchListCard'
 import CircularProgress from '@mui/material/CircularProgress';
 import EditIcon from '@mui/icons-material/Edit';
 import { update } from '../../Context/AuthContext/APICalls'
-import {useNavigate} from 'react-router-dom'
 import { logout } from '../../Context/AuthContext/AuthActions'
 
 

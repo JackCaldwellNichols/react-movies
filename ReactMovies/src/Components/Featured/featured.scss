@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .featured {
     height: 90vh;
     position: relative;
@@ -53,6 +55,9 @@
         color: white;
         display: flex;
         flex-direction: column;
+        @include tablet {
+            width: 70%;
+        }
         img{
             width: 400px;
         }
@@ -81,6 +86,9 @@
                     color: var(--main-color);
                     &:hover {
                         background-color: rgb(185, 185, 185);
+                    }
+                    @include tablet {
+                        display: none;
                     }
     
                 }

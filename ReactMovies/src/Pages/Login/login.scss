@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .login {
     background: linear-gradient(
         to bottom,
@@ -9,8 +11,7 @@
     width: 100vw;
     background-size: cover;
     position: relative;
-    
-  
+
         .top{
             .wrapper{
               padding: 20px 50px;
@@ -19,7 +20,10 @@
               justify-content: space-between;
 
               .logo{
-                height: 40px;
+                height: 60px;
+                @include tablet {
+                    height: 40px;
+                  }
               }
 
               .loginBtn{
@@ -47,7 +51,9 @@
             left: 0;
             h1 {
                 font-size: 40px;
-              
+                @include mobile {
+                    font-size: 30px;
+                  }
             }
 
             form {
@@ -59,9 +65,13 @@
                 padding: 50px;
                 border-radius: 5px;
                 gap: 10px;
+                @include mobile {
+                    width: 200px;
+                    height: 300px;
+                  }
             
             input {
-                margin-top: 10px;
+         
                 border: none;
                 border-bottom: 1px solid white;
                 height: 40px;
@@ -79,7 +89,6 @@
                 height: 40px;
                 cursor: pointer;
                 font-size: 20px;
-                margin-top: 10px;
                 background-color: #8C52FF;
                 padding: 5px 15px;
                 color: white;

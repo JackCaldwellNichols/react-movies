@@ -3,7 +3,7 @@ import './login.scss'
 import {Link} from 'react-router-dom'
 import { login } from '../../Context/AuthContext/APICalls'
 import logo from '../../assets/newLogo.png'
-import axios from 'axios'
+import CircularProgress from '@mui/material/CircularProgress';
 import { AuthContext } from '../../Context/AuthContext/AuthContext'
 
 
@@ -14,6 +14,7 @@ const Login = () => {
     const userRef = useRef()
     const passwordRef = useRef()
     const [message, setMessage] = useState(null)
+
     const handleSubmit = (e) => {
         e.preventDefault()
           login({username: userRef.current.value, password: passwordRef.current.value}, dispatch, setMessage)
@@ -24,7 +25,7 @@ const Login = () => {
     <div className='login'>
       <div className="top">
         <div className="wrapper">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className='logo'/>
         </div>
       </div>
       <div className="bottom">
@@ -32,9 +33,16 @@ const Login = () => {
         <h1>Sign in.</h1>
         <input type='username' placeholder='Username' ref={userRef} required/>
         <input type="password" placeholder='Password' ref={passwordRef} required/>
-        <button type='submit' disabled={isFetching}>
+      {!isFetching  ? 
+        (
+        <button type='submit'>
           Log in
         </button>
+        ) : ( 
+        <button  disabled>
+          Logging in...
+        </button>   
+        )}
         
         <span>Not signed up? Click <Link className='link' to='/register'>here.</Link></span>
         {error && <p style={{color: 'red', textAlign: 'center'}}>{message}</p>}
